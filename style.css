@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light_grey: hsl(217, 12%, 63%);
+    --medium_grey: hsl(216, 12%, 54%);   
+    --dark_blue: hsl(213, 19%, 18%);
+    --very_dark_blue: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--very_dark_blue);
+}
+
+section {
+    display: flex;
+    width: 320px;
+    height: 330px;
+    margin: auto;
+    background-color: var(--dark_blue);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.value {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: hsl(212, 23%, 22%);
+    color: var(--medium_grey);
+    font-size: 11px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+
+.value:hover {
+    background-color: var(--medium_grey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.value-selected {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+
+.value-selected:hover {
+    cursor: pointer;
+}
+
+span img {
+    height: 12px;
+    margin: auto;
+}
+
+.window h1 {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--white);
+    margin: 20px 0;
+}
+
+.window p {
+    color: var(--light_grey);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.rate-container {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.window button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 19px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.window button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.thanks-img {
+    height: 90px;
+    width: 130px;
+    margin: 5px auto;
+}
+
+.thanks .phrase {
+    display: flex;
+    width: 135px;
+    height: 26px;
+    margin: 15px auto;
+    background-color: hsl(212, 23%, 22%);
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 13px;
+    justify-content: center;
+    align-items: center;
+}
+
+.window h2 {
+    color: var(--white);
+    text-align: center;
+    margin: 10px auto;
+}
+
+.thanks p {
+    text-align: center;
+}

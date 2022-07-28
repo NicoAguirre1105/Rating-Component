@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Photos/favicon-32x32.png">
+</head>
+<body>
+    <section>
+        <div class="window" id="rating">
+            <span class="value">
+                <img src="Photos/icon-star.svg" alt="Star">
+            </span>
+            <h1>How did we do?</h1>
+            <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+            <div class="rate-container">
+                <span class="value" id="1">1</span>
+                <span class="value" id="2">2</span>
+                <span class="value" id="3">3</span>
+                <span class="value" id="4">4</span>
+                <span class="value" id="5">5</span>
+            </div>
+            <button id="submitButton">SUBMIT</button>
+        </div>
+        <div class="window thanks hidden" id="thanks">
+            <img class="thanks-img" src="Photos/illustration-thank-you.svg" alt="Bill">
+            <span class="phrase" id="phrase"></span>
+            <h2>Thank you!</h2>
+            <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
