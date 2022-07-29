@@ -1,25 +1,31 @@
 function main() {
     
-    function createRateEvent(value) {
+    function createRateEvent() {
         
-        function clickValue(id) {
-            const button = document.getElementById(id),
+        function clickValue(element) {
+            const clicked =  element.target.closest('button')
                 prevButton = document.getElementsByClassName('value-selected')
             
-            if (button.className.includes("value-selected")){
+            if (!clicked) {
+                console.log('clicked outside')
                 return
             }
+
+            if (clicked.className.includes("value-selected")){
+                return
+            }
+
             if (prevButton.length > 0){
                 prevButton[0].classList = 'value'
-                button.classList = "value-selected"
+                clicked.classList = "value-selected"
                 return
             }
             
-            button.classList = "value-selected"
+            clicked.classList = "value-selected"
         }
         
-        value.addEventListener('click', () => {
-            clickValue(value.getAttribute('id'))
+        valuesParent.addEventListener('click', (e) => {
+            clickValue(e)
         })
         
     }
@@ -36,7 +42,6 @@ function main() {
                 phrase = document.getElementById('phrase')
             if (selectedValue.length > 0) {
                 phrase.innerHTML = 'You selected ' + selectedValue[0].getAttribute('id') + ' out of 5'
-                console.log('Change window')
                 changeWindow()
                 return
             }
@@ -46,12 +51,10 @@ function main() {
         submitButton.addEventListener('click', submitRating)
     }
     
-    const values = document.getElementsByClassName('value'),
+    const valuesParent = document.getElementById('rate-container'),
         submitButton = document.getElementById('submitButton')
 
-    for (let i = 0; i < values.length; i++) {
-       createRateEvent(values[i])        
-    }
+    createRateEvent()
     createSubmitEvent()
 }
 
