@@ -6,10 +6,7 @@ function main() {
             const clicked =  element.target.closest('button')
                 prevButton = document.getElementsByClassName('value-selected')
             
-            if (!clicked) {
-                console.log('clicked outside')
-                return
-            }
+            if (!clicked) return
 
             if (clicked.className.includes("value-selected")){
                 return
